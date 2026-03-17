@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Fira+Code:wght@300..700&display=swap');
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Matrix';
+  src: url('./assets/fonts/Matrix-MZ4P.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  /* Definição de Cores Personalizadas */
+  --color-brand-black: #0A1212;
+  --color-brand-silver: #E0E6E6;
+  --color-brand-frame: #142121;
+  --color-brand-primary: #4FC8C2;
+
+  /* Configuração de Fontes */
+  --font-logo: "Matrix", serif;
+  --font-support: "Archivo", sans-serif;
+  --font-data: "Fira Code", monospace;
+}
+
+/* Estilos globais básicos */
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-silver antialiased;
+    font-family: var(--font-support);
+  }
+}
