@@ -1,12 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Fira+Code:wght@300..700&display=swap');
-
 @import "tailwindcss";
 
 @font-face {
   font-family: 'Matrix';
-  src: url('./assets/fonts/Matrix-MZ4P.ttf') format('truetype');
+  src: url('./assets/fonts/Matrix-MZ4P.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url(./assets/fonts/Archivo-VariableFont_wdth\,wght.woff2) format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url(./assets/fonts/Archivo-Italic-VariableFont_wdth\,wght.woff2) format('woff2-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url(./assets/fonts/FiraCode-VariableFont_wght.woff2) format('woff2-variations'),
+       url(./assets/fonts/FiraCode-VariableFont_wght.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 @theme {
@@ -20,6 +49,15 @@
   --font-logo: "Matrix", serif;
   --font-support: "Archivo", sans-serif;
   --font-data: "Fira Code", monospace;
+}
+
+@keyframes fluid-entry {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-hero {
+  animation: fluid-entry 1s ease-out forwards;
 }
 
 /* Estilos globais básicos */
